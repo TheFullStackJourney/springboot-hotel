@@ -2,14 +2,10 @@ package com.thefullstackjourney.spring.hotel_example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 // Springboot annotation that tells Spring Boot to start the application
-// It will try to connect to a database, but we don't have one yet
-// So we exclude the DataSourceAutoConfiguration class
-// This will allow us to run the application without a database
-// The reason it tries to connect to a database is because we added the JPA dependency in the pom.xml file
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
+// It will auto configure the JPA as its dependency is in the pom.xml file
+@SpringBootApplication
 public class HotelExampleApplication {
 
 	public static void main(String[] args) {
