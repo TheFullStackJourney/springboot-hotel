@@ -17,7 +17,8 @@ public class Room {
 
   @Id
   @Column(name = "ROOM_ID")
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  // @GeneratedValue(strategy = GenerationType.AUTO) // for H2 DB
+  @GeneratedValue(strategy = GenerationType.IDENTITY) // for Postgres DB
   private long id;
 
   @Column(name = "NAME")
